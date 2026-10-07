@@ -15,7 +15,9 @@
     box-shadow: 0 7px 22px rgba(32, 45, 50, 0.18);
     font-size: 11px;
     font-weight: 850;
-    transition: border-color 160ms ease, box-shadow 160ms ease;
+    transition:
+        border-color 160ms ease,
+        box-shadow 160ms ease;
 
     svg {
         width: 16px;
@@ -25,7 +27,8 @@
     &:hover,
     &:focus-visible {
         border-color: #963c29;
-        box-shadow: 0 0 0 4px rgba(232, 102, 69, 0.22),
+        box-shadow:
+            0 0 0 4px rgba(232, 102, 69, 0.22),
             0 9px 25px rgba(32, 45, 50, 0.2);
         outline: none;
     }

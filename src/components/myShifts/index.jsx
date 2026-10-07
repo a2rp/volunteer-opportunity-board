@@ -52,7 +52,8 @@ const MyShifts = ({ signups, onCancelSignup }) => {
                     <p className={styles.sectionLabel}>Your volunteer plan</p>
                     <h2 id="my-shifts-title">Good dates to keep.</h2>
                     <p className={styles.description}>
-                        Sign up for a shift and it will be saved here on this device.
+                        Sign up for a shift and it will be saved here on this
+                        device.
                     </p>
                 </div>
                 <div className={styles.hoursPlanned}>
@@ -68,25 +69,42 @@ const MyShifts = ({ signups, onCancelSignup }) => {
                         const date = formatDate(signup.date);
 
                         return (
-                            <article className={styles.signupCard} key={signup.id}>
+                            <article
+                                className={styles.signupCard}
+                                key={signup.id}
+                            >
                                 <time
                                     className={styles.dateTile}
                                     dateTime={signup.date}
-                                    aria-label={date.weekday + " " + date.month + " " + date.day}
+                                    aria-label={
+                                        date.weekday +
+                                        " " +
+                                        date.month +
+                                        " " +
+                                        date.day
+                                    }
                                 >
                                     <span>{date.weekday}</span>
                                     <strong>{date.day}</strong>
                                     <span>{date.month}</span>
                                 </time>
                                 <div className={styles.signupInfo}>
-                                    <span className={styles.cause}>{signup.cause}</span>
+                                    <span className={styles.cause}>
+                                        {signup.cause}
+                                    </span>
                                     <h3>{signup.title}</h3>
-                                    <p className={styles.organization}>{signup.organization}</p>
+                                    <p className={styles.organization}>
+                                        {signup.organization}
+                                    </p>
                                     <div className={styles.details}>
                                         <span>
                                             <FiClock aria-hidden="true" />
-                                            {formatTime(signup.startTime)} for {signup.durationHours} hour
-                                            {signup.durationHours === 1 ? "" : "s"}
+                                            {formatTime(
+                                                signup.startTime,
+                                            )} for {signup.durationHours} hour
+                                            {signup.durationHours === 1
+                                                ? ""
+                                                : "s"}
                                         </span>
                                         <span>
                                             <FiMapPin aria-hidden="true" />
@@ -110,7 +128,9 @@ const MyShifts = ({ signups, onCancelSignup }) => {
                                     </span>
                                     <button
                                         type="button"
-                                        onClick={() => setCancelingSignup(signup)}
+                                        onClick={() =>
+                                            setCancelingSignup(signup)
+                                        }
                                     >
                                         Cancel sign-up
                                     </button>
@@ -126,13 +146,20 @@ const MyShifts = ({ signups, onCancelSignup }) => {
                     </span>
                     <div>
                         <h3>Your next good thing goes here.</h3>
-                        <p>Sign up for a local shift to start your volunteer plan.</p>
+                        <p>
+                            Sign up for a local shift to start your volunteer
+                            plan.
+                        </p>
                     </div>
                     <a href="#opportunities">Find a shift</a>
                 </div>
             )}
 
-            <p className={styles.statusMessage} role="status" aria-live="polite">
+            <p
+                className={styles.statusMessage}
+                role="status"
+                aria-live="polite"
+            >
                 {statusMessage}
             </p>
 

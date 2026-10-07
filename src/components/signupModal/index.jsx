@@ -40,7 +40,7 @@ const SignupModal = ({ opportunity, onClose, onSubmit }) => {
             }
 
             const focusable = dialog.querySelectorAll(
-                'button:not([disabled]), input:not([disabled]), textarea:not([disabled])',
+                "button:not([disabled]), input:not([disabled]), textarea:not([disabled])",
             );
             const first = focusable[0];
             const last = focusable[focusable.length - 1];
@@ -102,7 +102,9 @@ const SignupModal = ({ opportunity, onClose, onSubmit }) => {
                         </button>
                     </div>
                     <h2 id="signup-title">{opportunity.title}</h2>
-                    <p className={styles.organization}>{opportunity.organization}</p>
+                    <p className={styles.organization}>
+                        {opportunity.organization}
+                    </p>
                     <div className={styles.details}>
                         <span>
                             <FiCalendar aria-hidden="true" />
@@ -110,7 +112,8 @@ const SignupModal = ({ opportunity, onClose, onSubmit }) => {
                         </span>
                         <span>
                             <FiClock aria-hidden="true" />
-                            {formatTime(opportunity.startTime)} · {opportunity.durationHours} hour
+                            {formatTime(opportunity.startTime)} ·{" "}
+                            {opportunity.durationHours} hour
                             {opportunity.durationHours === 1 ? "" : "s"}
                         </span>
                         <span>
@@ -118,7 +121,10 @@ const SignupModal = ({ opportunity, onClose, onSubmit }) => {
                             {opportunity.address}
                         </span>
                     </div>
-                    <p className={styles.shiftDescription} id="signup-description">
+                    <p
+                        className={styles.shiftDescription}
+                        id="signup-description"
+                    >
                         {opportunity.details}
                     </p>
                     <p className={styles.localNote}>
@@ -156,7 +162,9 @@ const SignupModal = ({ opportunity, onClose, onSubmit }) => {
                         />
                     </label>
                     <label className={styles.field}>
-                        <span>Note for your plan <small>Optional</small></span>
+                        <span>
+                            Note for your plan <small>Optional</small>
+                        </span>
                         <textarea
                             name="note"
                             rows="3"

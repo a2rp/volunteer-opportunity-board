@@ -42,7 +42,11 @@ const SiteHeader = () => {
     return (
         <header className={styles.siteHeader} ref={headerRef}>
             <div className={styles.inner}>
-                <a className={styles.brand} href="#top" aria-label="Goodturn home">
+                <a
+                    className={styles.brand}
+                    href="#top"
+                    aria-label="Goodturn home"
+                >
                     <span className={styles.brandMark} aria-hidden="true">
                         <FiHeart />
                     </span>
@@ -53,7 +57,9 @@ const SiteHeader = () => {
                 </a>
 
                 <nav
-                    className={menuOpen ? styles.navigationOpen : styles.navigation}
+                    className={
+                        menuOpen ? styles.navigationOpen : styles.navigation
+                    }
                     id="main-navigation"
                     aria-label="Main navigation"
                 >

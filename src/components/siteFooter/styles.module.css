@@ -26,7 +26,9 @@
         padding: 6px 10px;
         border: 1px solid transparent;
         border-radius: 9px;
-        transition: border-color 160ms ease, box-shadow 160ms ease;
+        transition:
+            border-color 160ms ease,
+            box-shadow 160ms ease;
 
         img {
             width: 91px;
@@ -87,7 +89,9 @@
         color: var(--muted);
         font-size: 10px;
         font-weight: 650;
-        transition: border-color 160ms ease, box-shadow 160ms ease;
+        transition:
+            border-color 160ms ease,
+            box-shadow 160ms ease;
 
         svg {
             width: 13px;

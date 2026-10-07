@@ -83,7 +83,9 @@ const OpportunityCard = ({
             </div>
 
             <div className={styles.cardContent}>
-                <p className={styles.organization}>{opportunity.organization}</p>
+                <p className={styles.organization}>
+                    {opportunity.organization}
+                </p>
                 <h3>{opportunity.title}</h3>
                 <p className={styles.summary}>{opportunity.summary}</p>
 
@@ -113,13 +115,17 @@ const OpportunityCard = ({
                             : `${spotsLeft} ${spotsLeft === 1 ? "place" : "places"} left`}
                     </span>
                     <button
-                        className={isSignedUp ? styles.signedButton : styles.joinButton}
+                        className={
+                            isSignedUp ? styles.signedButton : styles.joinButton
+                        }
                         type="button"
                         disabled={isSignedUp || spotsLeft === 0}
                         onClick={() => onSignUp(opportunity)}
                     >
                         {isSignedUp ? "In your plan" : "Sign up"}
-                        {!isSignedUp ? <FiArrowUpRight aria-hidden="true" /> : null}
+                        {!isSignedUp ? (
+                            <FiArrowUpRight aria-hidden="true" />
+                        ) : null}
                     </button>
                 </div>
             </div>

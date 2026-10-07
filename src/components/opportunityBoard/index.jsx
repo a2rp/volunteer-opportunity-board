@@ -56,7 +56,8 @@ const OpportunityBoard = ({
             .join(" ")
             .toLowerCase();
         const matchesSearch = searchText.includes(search.trim().toLowerCase());
-        const matchesCause = cause === "All causes" || opportunity.cause === cause;
+        const matchesCause =
+            cause === "All causes" || opportunity.cause === cause;
         const matchesDate =
             dateFilter === "any" ||
             (dateFilter === "week" && isWithinThisWeek(opportunity.date)) ||
@@ -74,12 +75,19 @@ const OpportunityBoard = ({
     };
 
     const hasActiveFilters =
-        search.trim() || cause !== "All causes" || dateFilter !== "any" || savedOnly;
+        search.trim() ||
+        cause !== "All causes" ||
+        dateFilter !== "any" ||
+        savedOnly;
 
     const saveShift = (opportunityId) => {
         const wasSaved = savedIds.includes(opportunityId);
         onToggleSaved(opportunityId);
-        setStatusMessage(wasSaved ? "Shift removed from your saved list." : "Shift saved for later.");
+        setStatusMessage(
+            wasSaved
+                ? "Shift removed from your saved list."
+                : "Shift saved for later.",
+        );
     };
 
     const confirmSignup = (volunteer) => {
@@ -96,8 +104,12 @@ const OpportunityBoard = ({
         >
             <div className={styles.heading}>
                 <div>
-                    <p className={styles.sectionLabel}>Choose your next shift</p>
-                    <h2 id="opportunities-title">Good things happen when we show up.</h2>
+                    <p className={styles.sectionLabel}>
+                        Choose your next shift
+                    </p>
+                    <h2 id="opportunities-title">
+                        Good things happen when we show up.
+                    </h2>
                     <p className={styles.description}>
                         Browse nearby ways to help. Every listing includes the
                         time, place, and people you will be joining.
@@ -124,7 +136,10 @@ const OpportunityBoard = ({
                 </label>
                 <label className={styles.selectField}>
                     <span>Cause</span>
-                    <select value={cause} onChange={(event) => setCause(event.target.value)}>
+                    <select
+                        value={cause}
+                        onChange={(event) => setCause(event.target.value)}
+                    >
                         {causes.map((item) => (
                             <option key={item}>{item}</option>
                         ))}
@@ -144,7 +159,11 @@ const OpportunityBoard = ({
                     </select>
                 </label>
                 <button
-                    className={savedOnly ? styles.savedToggleActive : styles.savedToggle}
+                    className={
+                        savedOnly
+                            ? styles.savedToggleActive
+                            : styles.savedToggle
+                    }
                     type="button"
                     aria-pressed={savedOnly}
                     onClick={() => setSavedOnly((saved) => !saved)}
@@ -158,7 +177,9 @@ const OpportunityBoard = ({
             <div className={styles.resultsLine}>
                 <p>
                     <FiSliders aria-hidden="true" />
-                    Showing <strong>{visibleOpportunities.length}</strong> of {opportunities.length} shifts
+                    Showing <strong>
+                        {visibleOpportunities.length}
+                    </strong> of {opportunities.length} shifts
                 </p>
                 {hasActiveFilters ? (
                     <button type="button" onClick={clearFilters}>
@@ -176,7 +197,8 @@ const OpportunityBoard = ({
                             opportunity={opportunity}
                             isSaved={savedIds.includes(opportunity.id)}
                             isSignedUp={signups.some(
-                                (signup) => signup.opportunityId === opportunity.id,
+                                (signup) =>
+                                    signup.opportunityId === opportunity.id,
                             )}
                             onToggleSaved={saveShift}
                             onSignUp={setSelectedOpportunity}
@@ -194,7 +216,11 @@ const OpportunityBoard = ({
                 </div>
             )}
 
-            <p className={styles.statusMessage} role="status" aria-live="polite">
+            <p
+                className={styles.statusMessage}
+                role="status"
+                aria-live="polite"
+            >
                 {statusMessage}
             </p>
 

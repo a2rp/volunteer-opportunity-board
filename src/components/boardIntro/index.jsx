@@ -1,4 +1,10 @@
-import { FiArrowDown, FiCalendar, FiHeart, FiMapPin, FiUsers } from "react-icons/fi";
+import {
+    FiArrowDown,
+    FiCalendar,
+    FiHeart,
+    FiMapPin,
+    FiUsers,
+} from "react-icons/fi";
 import styles from "./styles.module.css";
 
 const BoardIntro = ({ openCount, causeCount, plannedCount }) => (
@@ -21,9 +27,9 @@ const BoardIntro = ({ openCount, causeCount, plannedCount }) => (
                     <span>Change a lot.</span>
                 </h1>
                 <p className={styles.description}>
-                    Find a nearby shift that feels right for you. A free morning,
-                    a kind hello, or a pair of helping hands can make a real
-                    difference.
+                    Find a nearby shift that feels right for you. A free
+                    morning, a kind hello, or a pair of helping hands can make a
+                    real difference.
                 </p>
                 <a className={styles.exploreLink} href="#opportunities">
                     Explore open shifts
@@ -31,7 +37,10 @@ const BoardIntro = ({ openCount, causeCount, plannedCount }) => (
                 </a>
             </div>
 
-            <aside className={styles.weekCard} aria-label="Northbank volunteer needs">
+            <aside
+                className={styles.weekCard}
+                aria-label="Northbank volunteer needs"
+            >
                 <div className={styles.weekHeading}>
                     <span>Coming up in Northbank</span>
                     <FiHeart aria-hidden="true" />

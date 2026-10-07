@@ -17,7 +17,8 @@ const steps = [
     {
         number: "03",
         title: "Show up and help",
-        description: "Your plan stays in My shifts, ready when the day arrives.",
+        description:
+            "Your plan stays in My shifts, ready when the day arrives.",
         Icon: FiSun,
     },
 ];

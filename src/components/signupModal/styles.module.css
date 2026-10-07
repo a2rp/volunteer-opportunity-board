@@ -50,7 +50,9 @@
         border-radius: 9px;
         background: transparent;
         color: var(--white);
-        transition: border-color 160ms ease, box-shadow 160ms ease;
+        transition:
+            border-color 160ms ease,
+            box-shadow 160ms ease;
 
         svg {
             width: 18px;
@@ -170,7 +172,9 @@
             background: #fff;
             color: var(--ink);
             font-size: 12px;
-            transition: border-color 160ms ease, box-shadow 160ms ease;
+            transition:
+                border-color 160ms ease,
+                box-shadow 160ms ease;
 
             &::placeholder {
                 color: #93a0a1;
@@ -206,7 +210,9 @@
         color: var(--ink);
         font-size: 11px;
         font-weight: 800;
-        transition: border-color 160ms ease, box-shadow 160ms ease;
+        transition:
+            border-color 160ms ease,
+            box-shadow 160ms ease;
 
         &:hover,
         &:focus-visible {
