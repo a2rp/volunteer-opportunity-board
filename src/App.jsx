@@ -1,5 +1,6 @@
 import { useState } from "react";
 import BoardIntro from "./components/boardIntro/index.jsx";
+import HowItWorks from "./components/howItWorks/index.jsx";
 import MyShifts from "./components/myShifts/index.jsx";
 import OpportunityBoard from "./components/opportunityBoard/index.jsx";
 import SiteHeader from "./components/siteHeader/index.jsx";
@@ -94,6 +95,7 @@ const App = () => {
                     onSignUp={signUpForOpportunity}
                 />
                 <MyShifts signups={signups} onCancelSignup={cancelSignup} />
+                <HowItWorks />
             </main>
         </div>
     );
