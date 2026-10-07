@@ -1,0 +1,135 @@
+.backdrop {
+    position: fixed;
+    z-index: 55;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    padding: 20px;
+    background: rgba(20, 29, 33, 0.66);
+}
+
+.dialog {
+    position: relative;
+    width: min(430px, 100%);
+    padding: 27px;
+    border: 1px solid var(--line);
+    border-radius: 17px;
+    background: var(--white);
+    box-shadow: 0 24px 70px rgba(20, 29, 33, 0.27);
+
+    .icon {
+        display: grid;
+        width: 43px;
+        height: 43px;
+        place-items: center;
+        border: 1px solid #f0c8b8;
+        border-radius: 12px;
+        background: var(--soft-coral);
+        color: var(--coral-dark);
+
+        svg {
+            width: 21px;
+            height: 21px;
+        }
+    }
+
+    .closeButton {
+        position: absolute;
+        top: 21px;
+        right: 21px;
+        display: grid;
+        width: 34px;
+        height: 34px;
+        place-items: center;
+        border: 1px solid var(--line);
+        border-radius: 9px;
+        background: transparent;
+        color: var(--muted);
+        transition: border-color 160ms ease, box-shadow 160ms ease;
+
+        svg {
+            width: 17px;
+            height: 17px;
+        }
+
+        &:hover,
+        &:focus-visible {
+            border-color: var(--coral);
+            box-shadow: 0 0 0 3px rgba(232, 102, 69, 0.12);
+            outline: none;
+        }
+    }
+
+    h2 {
+        margin-top: 18px;
+        color: var(--ink);
+        font-size: 23px;
+        font-weight: 850;
+        letter-spacing: -0.8px;
+    }
+
+    p {
+        margin-top: 8px;
+        color: var(--muted);
+        font-size: 12px;
+        line-height: 1.6;
+    }
+
+    .itemName {
+        margin-top: 10px;
+        color: var(--coral-dark);
+        font-size: 13px;
+        font-weight: 800;
+    }
+
+    .actions {
+        display: flex;
+        justify-content: flex-end;
+        gap: 9px;
+        margin-top: 24px;
+    }
+
+    .keepButton,
+    .removeButton {
+        min-height: 42px;
+        padding: 0 13px;
+        border: 1px solid var(--line);
+        border-radius: 9px;
+        background: var(--white);
+        color: var(--ink);
+        font-size: 11px;
+        font-weight: 800;
+        transition: border-color 160ms ease, box-shadow 160ms ease;
+
+        &:hover,
+        &:focus-visible {
+            border-color: var(--coral);
+            box-shadow: 0 0 0 3px rgba(232, 102, 69, 0.12);
+            outline: none;
+        }
+    }
+
+    .removeButton {
+        border-color: var(--coral-dark);
+        background: var(--coral-dark);
+        color: var(--white);
+
+        &:hover,
+        &:focus-visible {
+            border-color: #963c29;
+        }
+    }
+
+    @media (max-width: 420px) {
+        padding: 23px 19px;
+
+        .actions {
+            flex-direction: column-reverse;
+        }
+
+        .keepButton,
+        .removeButton {
+            width: 100%;
+        }
+    }
+}
