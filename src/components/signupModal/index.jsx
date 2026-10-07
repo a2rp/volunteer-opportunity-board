@@ -122,14 +122,15 @@ const SignupModal = ({ opportunity, onClose, onSubmit }) => {
                         {opportunity.details}
                     </p>
                     <p className={styles.localNote}>
-                        Your sign-up is saved on this device for this demo.
+                        This demo saves your plan on this device. It does not
+                        send your details to the organization.
                     </p>
                 </div>
 
                 <form className={styles.form} onSubmit={submitSignup}>
                     <div className={styles.formHeading}>
                         <span>Volunteer details</span>
-                        <p>Tell the organizer who is coming.</p>
+                        <p>Add your details to your volunteer plan.</p>
                     </div>
 
                     <label className={styles.field}>
@@ -155,7 +156,7 @@ const SignupModal = ({ opportunity, onClose, onSubmit }) => {
                         />
                     </label>
                     <label className={styles.field}>
-                        <span>Note for the organizer <small>Optional</small></span>
+                        <span>Note for your plan <small>Optional</small></span>
                         <textarea
                             name="note"
                             rows="3"
@@ -173,7 +174,7 @@ const SignupModal = ({ opportunity, onClose, onSubmit }) => {
                             Cancel
                         </button>
                         <button className={styles.submitButton} type="submit">
-                            Confirm sign-up
+                            Add to My shifts
                         </button>
                     </div>
                 </form>

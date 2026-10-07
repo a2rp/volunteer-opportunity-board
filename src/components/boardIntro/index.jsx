@@ -16,7 +16,6 @@ const BoardIntro = ({ openCount, causeCount, plannedCount }) => (
 
         <div className={styles.introContent}>
             <div className={styles.copy}>
-                <p className={styles.titleLabel}>Good work, close to home</p>
                 <h1 id="intro-title">
                     Give a little time.
                     <span>Change a lot.</span>
@@ -34,7 +33,7 @@ const BoardIntro = ({ openCount, causeCount, plannedCount }) => (
 
             <aside className={styles.weekCard} aria-label="Northbank volunteer needs">
                 <div className={styles.weekHeading}>
-                    <span>This week in Northbank</span>
+                    <span>Coming up in Northbank</span>
                     <FiHeart aria-hidden="true" />
                 </div>
                 <p className={styles.shiftCount}>
@@ -66,8 +65,8 @@ const BoardIntro = ({ openCount, causeCount, plannedCount }) => (
         </div>
 
         <div className={styles.valueLine}>
-            <span>One good hour can start something.</span>
-            <span>Choose a shift. Show up. Make a difference.</span>
+            <span>Most shifts take 1-3 hours.</span>
+            <span>Choose a shift and find it later in My shifts.</span>
         </div>
     </section>
 );

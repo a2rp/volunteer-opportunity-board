@@ -84,7 +84,7 @@ const OpportunityBoard = ({
 
     const confirmSignup = (volunteer) => {
         onSignUp(selectedOpportunity, volunteer);
-        setStatusMessage(`You're signed up for ${selectedOpportunity.title}.`);
+        setStatusMessage(`Added ${selectedOpportunity.title} to My shifts.`);
         setSelectedOpportunity(null);
     };
 

@@ -82,10 +82,12 @@
         align-items: center;
         gap: 7px;
         width: fit-content;
+        border-bottom: 1px solid transparent;
         border-radius: 5px;
         color: var(--muted);
         font-size: 10px;
         font-weight: 650;
+        transition: border-color 160ms ease, box-shadow 160ms ease;
 
         svg {
             width: 13px;
@@ -95,9 +97,9 @@
 
         &:hover,
         &:focus-visible {
-            color: var(--ink);
-            outline: 1px solid #c9bca9;
-            outline-offset: 3px;
+            border-bottom-color: #c9bca9;
+            box-shadow: 0 2px 0 rgba(32, 45, 50, 0.08);
+            outline: none;
         }
     }
 

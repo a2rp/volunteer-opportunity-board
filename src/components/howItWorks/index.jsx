@@ -11,7 +11,7 @@ const steps = [
     {
         number: "02",
         title: "Save your place",
-        description: "Share your name and email so the organizer knows to expect you.",
+        description: "Add your details and keep the plan on this device.",
         Icon: FiCheckCircle,
     },
     {

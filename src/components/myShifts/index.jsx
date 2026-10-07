@@ -69,11 +69,15 @@ const MyShifts = ({ signups, onCancelSignup }) => {
 
                         return (
                             <article className={styles.signupCard} key={signup.id}>
-                                <div className={styles.dateTile} aria-label={date.weekday + " " + date.month + " " + date.day}>
+                                <time
+                                    className={styles.dateTile}
+                                    dateTime={signup.date}
+                                    aria-label={date.weekday + " " + date.month + " " + date.day}
+                                >
                                     <span>{date.weekday}</span>
                                     <strong>{date.day}</strong>
                                     <span>{date.month}</span>
-                                </div>
+                                </time>
                                 <div className={styles.signupInfo}>
                                     <span className={styles.cause}>{signup.cause}</span>
                                     <h3>{signup.title}</h3>
@@ -93,11 +97,16 @@ const MyShifts = ({ signups, onCancelSignup }) => {
                                             {signup.volunteerName}
                                         </span>
                                     </div>
+                                    {signup.note ? (
+                                        <p className={styles.volunteerNote}>
+                                            Note: {signup.note}
+                                        </p>
+                                    ) : null}
                                 </div>
                                 <div className={styles.signupActions}>
                                     <span className={styles.status}>
                                         <i aria-hidden="true" />
-                                        Signed up
+                                        Plan saved
                                     </span>
                                     <button
                                         type="button"

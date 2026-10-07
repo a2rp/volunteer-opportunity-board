@@ -4,7 +4,7 @@ import {
     FiCalendar,
     FiClock,
     FiHeart,
-    FiLeaf,
+    FiSun,
     FiMapPin,
     FiShoppingBag,
     FiUsers,
@@ -14,7 +14,7 @@ import styles from "./styles.module.css";
 const causeIcons = {
     Animals: FiHeart,
     Community: FiUsers,
-    Environment: FiLeaf,
+    Environment: FiSun,
     "Food support": FiShoppingBag,
     Learning: FiBookOpen,
 };
@@ -45,7 +45,8 @@ const OpportunityCard = ({
     onSignUp,
 }) => {
     const CauseIcon = causeIcons[opportunity.cause] || FiHeart;
-    const spotsLeft = opportunity.capacity - opportunity.filled;
+    const spotsLeft =
+        opportunity.capacity - opportunity.filled - Number(isSignedUp);
     const accentStyle = styles[opportunity.accent] || styles.coral;
     const imageSource = opportunity.image
         ? `${import.meta.env.BASE_URL}images/${opportunity.image}`
@@ -117,7 +118,7 @@ const OpportunityCard = ({
                         disabled={isSignedUp || spotsLeft === 0}
                         onClick={() => onSignUp(opportunity)}
                     >
-                        {isSignedUp ? "You're signed up" : "Sign up"}
+                        {isSignedUp ? "In your plan" : "Sign up"}
                         {!isSignedUp ? <FiArrowUpRight aria-hidden="true" /> : null}
                     </button>
                 </div>

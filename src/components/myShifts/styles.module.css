@@ -151,6 +151,13 @@
         }
     }
 
+    .volunteerNote {
+        margin-top: 7px;
+        color: #f0d996;
+        font-size: 10px;
+        line-height: 1.45;
+    }
+
     .signupActions {
         display: grid;
         justify-items: end;
