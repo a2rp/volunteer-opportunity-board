@@ -1,5 +1,6 @@
 import { useState } from "react";
 import BoardIntro from "./components/boardIntro/index.jsx";
+import MyShifts from "./components/myShifts/index.jsx";
 import OpportunityBoard from "./components/opportunityBoard/index.jsx";
 import SiteHeader from "./components/siteHeader/index.jsx";
 import { volunteerOpportunities } from "./data/volunteerOpportunities.js";
@@ -70,6 +71,12 @@ const App = () => {
         writeList(storageKeys.signups, nextSignups);
     };
 
+    const cancelSignup = (signupId) => {
+        const nextSignups = signups.filter((signup) => signup.id !== signupId);
+        setSignups(nextSignups);
+        writeList(storageKeys.signups, nextSignups);
+    };
+
     return (
         <div className={styles.appShell} id="top">
             <SiteHeader />
@@ -86,6 +93,7 @@ const App = () => {
                     onToggleSaved={toggleSaved}
                     onSignUp={signUpForOpportunity}
                 />
+                <MyShifts signups={signups} onCancelSignup={cancelSignup} />
             </main>
         </div>
     );

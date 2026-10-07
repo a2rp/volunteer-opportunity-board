@@ -1,0 +1,334 @@
+.myShifts {
+    scroll-margin-top: 96px;
+    padding: clamp(23px, 4vw, 39px);
+    border: 1px solid #35464a;
+    border-radius: 20px;
+    background: var(--ink);
+    color: var(--white);
+
+    .heading {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+    }
+
+    .sectionLabel {
+        margin-bottom: 6px;
+        color: var(--gold);
+        font-size: 10px;
+        font-weight: 850;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+    }
+
+    h2 {
+        color: var(--white);
+        font-size: clamp(26px, 3.4vw, 39px);
+        font-weight: 900;
+        letter-spacing: -1.5px;
+        line-height: 1.1;
+    }
+
+    .description {
+        margin-top: 6px;
+        color: rgba(255, 253, 248, 0.66);
+        font-size: 12px;
+    }
+
+    .hoursPlanned {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding: 11px 14px;
+        border: 1px solid rgba(239, 198, 94, 0.25);
+        border-radius: 11px;
+        background: rgba(239, 198, 94, 0.1);
+        color: rgba(255, 253, 248, 0.76);
+        font-size: 10px;
+        font-weight: 700;
+        white-space: nowrap;
+
+        svg {
+            width: 15px;
+            height: 15px;
+            color: var(--gold);
+        }
+
+        strong {
+            color: var(--gold);
+            font-size: 19px;
+            font-weight: 850;
+        }
+    }
+
+    .signupList {
+        display: grid;
+        gap: 9px;
+        margin-top: 25px;
+    }
+
+    .signupCard {
+        display: grid;
+        grid-template-columns: 58px minmax(0, 1fr) auto;
+        align-items: center;
+        gap: 16px;
+        padding: 14px;
+        border: 1px solid rgba(255, 253, 248, 0.14);
+        border-radius: 13px;
+        background: rgba(255, 253, 248, 0.055);
+    }
+
+    .dateTile {
+        display: grid;
+        min-height: 68px;
+        align-content: center;
+        justify-items: center;
+        border: 1px solid rgba(239, 198, 94, 0.42);
+        border-radius: 10px;
+        background: #f5e7bd;
+        color: var(--ink);
+
+        span {
+            color: #8a6e31;
+            font-size: 8px;
+            font-weight: 850;
+            letter-spacing: 0.6px;
+            text-transform: uppercase;
+        }
+
+        strong {
+            font-size: 22px;
+            font-weight: 900;
+            line-height: 1;
+        }
+    }
+
+    .signupInfo {
+        min-width: 0;
+    }
+
+    .cause {
+        color: var(--gold);
+        font-size: 9px;
+        font-weight: 800;
+        letter-spacing: 0.4px;
+        text-transform: uppercase;
+    }
+
+    .signupInfo h3 {
+        margin-top: 2px;
+        color: var(--white);
+        font-size: 16px;
+        font-weight: 850;
+        letter-spacing: -0.25px;
+    }
+
+    .organization {
+        margin-top: 1px;
+        color: rgba(255, 253, 248, 0.66);
+        font-size: 10px;
+    }
+
+    .details {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5px 13px;
+        margin-top: 8px;
+        color: rgba(255, 253, 248, 0.82);
+        font-size: 9px;
+
+        span {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        svg {
+            width: 11px;
+            height: 11px;
+            color: var(--gold);
+        }
+    }
+
+    .signupActions {
+        display: grid;
+        justify-items: end;
+        gap: 9px;
+
+        button {
+            min-height: 34px;
+            padding: 0 10px;
+            border: 1px solid rgba(255, 253, 248, 0.22);
+            border-radius: 8px;
+            background: transparent;
+            color: rgba(255, 253, 248, 0.82);
+            font-size: 9px;
+            font-weight: 750;
+            transition: border-color 160ms ease, box-shadow 160ms ease;
+
+            &:hover,
+            &:focus-visible {
+                border-color: var(--coral);
+                box-shadow: 0 0 0 3px rgba(232, 102, 69, 0.16);
+                outline: none;
+            }
+        }
+    }
+
+    .status {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        color: #b8d3ac;
+        font-size: 9px;
+        font-weight: 800;
+
+        i {
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background: #8eb77b;
+        }
+    }
+
+    .emptyState {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        margin-top: 24px;
+        padding: 20px;
+        border: 1px dashed rgba(255, 253, 248, 0.25);
+        border-radius: 13px;
+        background: rgba(255, 253, 248, 0.04);
+    }
+
+    .emptyIcon {
+        display: grid;
+        width: 43px;
+        height: 43px;
+        flex: 0 0 auto;
+        place-items: center;
+        border-radius: 11px;
+        background: rgba(239, 198, 94, 0.14);
+        color: var(--gold);
+
+        svg {
+            width: 19px;
+            height: 19px;
+        }
+    }
+
+    .emptyState h3 {
+        color: var(--white);
+        font-size: 13px;
+        font-weight: 850;
+    }
+
+    .emptyState p {
+        margin-top: 3px;
+        color: rgba(255, 253, 248, 0.66);
+        font-size: 10px;
+    }
+
+    .emptyState a {
+        display: inline-flex;
+        min-height: 37px;
+        align-items: center;
+        margin-left: auto;
+        padding: 0 12px;
+        border: 1px solid rgba(239, 198, 94, 0.44);
+        border-radius: 8px;
+        color: var(--gold);
+        font-size: 10px;
+        font-weight: 800;
+        transition: border-color 160ms ease, box-shadow 160ms ease;
+
+        &:hover,
+        &:focus-visible {
+            border-color: var(--gold);
+            box-shadow: 0 0 0 3px rgba(239, 198, 94, 0.15);
+            outline: none;
+        }
+    }
+
+    .statusMessage {
+        min-height: 18px;
+        margin-top: 12px;
+        color: #b8d3ac;
+        font-size: 10px;
+        font-weight: 700;
+    }
+
+    @media (max-width: 760px) {
+        scroll-margin-top: 80px;
+
+        .signupCard {
+            grid-template-columns: 52px minmax(0, 1fr);
+        }
+
+        .signupActions {
+            grid-column: 2;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            justify-items: initial;
+        }
+    }
+
+    @media (max-width: 520px) {
+        padding: 22px 17px;
+
+        .heading {
+            align-items: flex-start;
+        }
+
+        .hoursPlanned {
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 4px 6px;
+            padding: 9px;
+            white-space: normal;
+
+            span {
+                width: 100%;
+                text-align: center;
+            }
+        }
+
+        .signupCard {
+            align-items: start;
+            gap: 10px;
+            padding: 11px;
+        }
+
+        .dateTile {
+            min-height: 61px;
+        }
+
+        .signupInfo h3 {
+            font-size: 14px;
+        }
+
+        .details {
+            display: grid;
+            gap: 5px;
+        }
+
+        .emptyState {
+            flex-wrap: wrap;
+            gap: 10px;
+            padding: 15px;
+        }
+
+        .emptyState div {
+            flex: 1 1 calc(100% - 58px);
+        }
+
+        .emptyState a {
+            width: 100%;
+            justify-content: center;
+            margin-left: 0;
+        }
+    }
+}
