@@ -1,5 +1,6 @@
 import { useState } from "react";
 import BoardIntro from "./components/boardIntro/index.jsx";
+import BackToTop from "./components/backToTop/index.jsx";
 import HowItWorks from "./components/howItWorks/index.jsx";
 import MyShifts from "./components/myShifts/index.jsx";
 import OpportunityBoard from "./components/opportunityBoard/index.jsx";
@@ -99,6 +100,7 @@ const App = () => {
                 <HowItWorks />
             </main>
             <SiteFooter />
+            <BackToTop />
         </div>
     );
 };

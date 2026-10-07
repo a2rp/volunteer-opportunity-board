@@ -1,0 +1,39 @@
+.backToTop {
+    position: fixed;
+    z-index: 30;
+    right: max(22px, calc((100vw - 1320px) / 2));
+    bottom: 22px;
+    display: inline-flex;
+    min-height: 44px;
+    align-items: center;
+    gap: 7px;
+    padding: 0 13px;
+    border: 1px solid var(--coral-dark);
+    border-radius: 11px;
+    background: var(--coral);
+    color: var(--white);
+    box-shadow: 0 7px 22px rgba(32, 45, 50, 0.18);
+    font-size: 11px;
+    font-weight: 850;
+    transition: border-color 160ms ease, box-shadow 160ms ease;
+
+    svg {
+        width: 16px;
+        height: 16px;
+    }
+
+    &:hover,
+    &:focus-visible {
+        border-color: #963c29;
+        box-shadow: 0 0 0 4px rgba(232, 102, 69, 0.22),
+            0 9px 25px rgba(32, 45, 50, 0.2);
+        outline: none;
+    }
+
+    @media (max-width: 560px) {
+        right: 14px;
+        bottom: 14px;
+        min-height: 42px;
+        padding: 0 11px;
+    }
+}
