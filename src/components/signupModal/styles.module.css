@@ -1,0 +1,278 @@
+.backdrop {
+    position: fixed;
+    z-index: 50;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    overflow-y: auto;
+    padding: 24px;
+    background: rgba(20, 29, 33, 0.68);
+}
+
+.dialog {
+    display: grid;
+    width: min(760px, 100%);
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+    overflow: hidden;
+    border: 1px solid rgba(255, 253, 248, 0.4);
+    border-radius: 20px;
+    background: var(--white);
+    box-shadow: 0 24px 80px rgba(20, 29, 33, 0.3);
+
+    .shiftSummary {
+        display: flex;
+        flex-direction: column;
+        padding: 28px 24px;
+        background: var(--ink);
+        color: var(--white);
+    }
+
+    .summaryTop {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .label {
+        color: var(--gold);
+        font-size: 10px;
+        font-weight: 850;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+    }
+
+    .closeButton {
+        display: grid;
+        width: 36px;
+        height: 36px;
+        place-items: center;
+        border: 1px solid rgba(255, 253, 248, 0.22);
+        border-radius: 9px;
+        background: transparent;
+        color: var(--white);
+        transition: border-color 160ms ease, box-shadow 160ms ease;
+
+        svg {
+            width: 18px;
+            height: 18px;
+        }
+
+        &:hover,
+        &:focus-visible {
+            border-color: var(--gold);
+            box-shadow: 0 0 0 3px rgba(239, 198, 94, 0.18);
+            outline: none;
+        }
+    }
+
+    h2 {
+        margin-top: 28px;
+        color: var(--white);
+        font-size: 29px;
+        font-weight: 850;
+        letter-spacing: -1.2px;
+        line-height: 1.12;
+    }
+
+    .organization {
+        margin-top: 7px;
+        color: rgba(255, 253, 248, 0.72);
+        font-size: 12px;
+        font-weight: 700;
+    }
+
+    .details {
+        display: grid;
+        gap: 12px;
+        margin-top: 25px;
+        padding: 16px 0;
+        border-top: 1px solid rgba(255, 253, 248, 0.16);
+        border-bottom: 1px solid rgba(255, 253, 248, 0.16);
+        color: var(--white);
+        font-size: 11px;
+        font-weight: 700;
+
+        span {
+            display: flex;
+            align-items: center;
+            gap: 9px;
+        }
+
+        svg {
+            width: 14px;
+            height: 14px;
+            flex: 0 0 auto;
+            color: var(--gold);
+        }
+    }
+
+    .shiftDescription {
+        margin-top: 18px;
+        color: rgba(255, 253, 248, 0.82);
+        font-size: 12px;
+        line-height: 1.65;
+    }
+
+    .localNote {
+        margin-top: auto;
+        padding-top: 30px;
+        color: rgba(255, 253, 248, 0.55);
+        font-size: 10px;
+    }
+
+    .form {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        padding: 29px 27px 25px;
+    }
+
+    .formHeading {
+        margin-bottom: 4px;
+
+        span {
+            color: var(--ink);
+            font-size: 18px;
+            font-weight: 850;
+            letter-spacing: -0.4px;
+        }
+
+        p {
+            margin-top: 3px;
+            color: var(--muted);
+            font-size: 12px;
+        }
+    }
+
+    .field {
+        display: grid;
+        gap: 6px;
+
+        > span {
+            color: var(--ink);
+            font-size: 11px;
+            font-weight: 800;
+        }
+
+        small {
+            margin-left: 4px;
+            color: var(--muted);
+            font-weight: 500;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            min-height: 43px;
+            padding: 10px 12px;
+            border: 1px solid var(--line);
+            border-radius: 9px;
+            background: #fff;
+            color: var(--ink);
+            font-size: 12px;
+            transition: border-color 160ms ease, box-shadow 160ms ease;
+
+            &::placeholder {
+                color: #93a0a1;
+            }
+
+            &:focus {
+                border-color: var(--coral);
+                box-shadow: 0 0 0 3px rgba(232, 102, 69, 0.13);
+                outline: none;
+            }
+        }
+
+        textarea {
+            min-height: 84px;
+        }
+    }
+
+    .formActions {
+        display: flex;
+        justify-content: flex-end;
+        gap: 9px;
+        margin-top: auto;
+        padding-top: 8px;
+    }
+
+    .cancelButton,
+    .submitButton {
+        min-height: 43px;
+        padding: 0 15px;
+        border: 1px solid var(--line);
+        border-radius: 9px;
+        background: var(--white);
+        color: var(--ink);
+        font-size: 11px;
+        font-weight: 800;
+        transition: border-color 160ms ease, box-shadow 160ms ease;
+
+        &:hover,
+        &:focus-visible {
+            border-color: var(--coral);
+            box-shadow: 0 0 0 3px rgba(232, 102, 69, 0.12);
+            outline: none;
+        }
+    }
+
+    .submitButton {
+        border-color: var(--coral);
+        background: var(--coral);
+        color: var(--white);
+
+        &:hover,
+        &:focus-visible {
+            border-color: var(--coral-dark);
+        }
+    }
+
+    @media (max-width: 650px) {
+        max-width: 480px;
+        grid-template-columns: 1fr;
+
+        .shiftSummary {
+            padding: 20px;
+        }
+
+        h2 {
+            margin-top: 15px;
+            font-size: 24px;
+        }
+
+        .details {
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin-top: 17px;
+            padding: 13px 0;
+        }
+
+        .details span:last-child {
+            grid-column: 1 / -1;
+        }
+
+        .shiftDescription {
+            margin-top: 13px;
+        }
+
+        .localNote {
+            padding-top: 14px;
+        }
+
+        .form {
+            gap: 12px;
+            padding: 21px 20px;
+        }
+    }
+
+    @media (max-width: 420px) {
+        .formActions {
+            flex-direction: column-reverse;
+        }
+
+        .cancelButton,
+        .submitButton {
+            width: 100%;
+        }
+    }
+}
