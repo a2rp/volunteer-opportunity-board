@@ -70,11 +70,12 @@ const CancelSignupModal = ({ signup, onClose, onConfirm }) => {
                 >
                     <FiX aria-hidden="true" />
                 </button>
-                <h2 id="cancel-signup-title">Remove your sign-up?</h2>
+                <h2 id="cancel-signup-title">Remove this from your plan?</h2>
                 <p className={styles.itemName}>{signup.title}</p>
                 <p id="cancel-signup-description">
-                    This will give your place back to the organizer. You can
-                    sign up again if places remain.
+                    This removes the shift from your plan on this device. The
+                    demo does not contact the organizer or change real
+                    availability.
                 </p>
                 <div className={styles.actions}>
                     <button
@@ -90,7 +91,7 @@ const CancelSignupModal = ({ signup, onClose, onConfirm }) => {
                         type="button"
                         onClick={() => onConfirm(signup.id)}
                     >
-                        Remove sign-up
+                        Remove from plan
                     </button>
                 </div>
             </section>

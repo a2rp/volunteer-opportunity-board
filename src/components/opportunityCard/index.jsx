@@ -122,7 +122,7 @@ const OpportunityCard = ({
                         disabled={isSignedUp || spotsLeft === 0}
                         onClick={() => onSignUp(opportunity)}
                     >
-                        {isSignedUp ? "In your plan" : "Sign up"}
+                        {isSignedUp ? "In your plan" : "Add to plan"}
                         {!isSignedUp ? (
                             <FiArrowUpRight aria-hidden="true" />
                         ) : null}

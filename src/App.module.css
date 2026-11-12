@@ -9,6 +9,16 @@
         padding: 116px 0 88px;
     }
 
+    .storageWarning {
+        margin-bottom: 18px;
+        padding: 11px 14px;
+        border: 1px solid var(--coral-dark);
+        border-radius: 9px;
+        background: var(--soft-coral);
+        color: var(--ink);
+        font-size: 12px;
+    }
+
     @media (max-width: 760px) {
         .pageContent {
             width: calc(100% - 32px);

@@ -27,8 +27,6 @@ export const volunteerOpportunities = [
             "Help clear the riverside path, sort litter, and leave the water's edge ready for a busy weekend.",
         details:
             "Meet the Green Team at the footbridge. Gloves, bags, and a short safety briefing are provided. Bring water and shoes you do not mind getting muddy.",
-        image: "river-care.jpg",
-        imageAlt: "A person standing near a wide waterfall",
         accent: "coral",
     },
     {

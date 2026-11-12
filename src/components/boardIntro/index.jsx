@@ -16,7 +16,7 @@ const BoardIntro = ({ openCount, causeCount, plannedCount }) => (
             </span>
             <span className={styles.openLabel}>
                 <i aria-hidden="true" />
-                New shifts added weekly
+                Sample volunteer opportunities
             </span>
         </div>
 

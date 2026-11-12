@@ -86,12 +86,12 @@ const SignupModal = ({ opportunity, onClose, onSubmit }) => {
                 role="dialog"
                 aria-modal="true"
                 aria-labelledby="signup-title"
-                aria-describedby="signup-description"
+                aria-describedby="signup-description signup-storage-note"
                 ref={dialogRef}
             >
                 <div className={styles.shiftSummary}>
                     <div className={styles.summaryTop}>
-                        <span className={styles.label}>Join the shift</span>
+                        <span className={styles.label}>Add to your plan</span>
                         <button
                             className={styles.closeButton}
                             type="button"
@@ -127,9 +127,10 @@ const SignupModal = ({ opportunity, onClose, onSubmit }) => {
                     >
                         {opportunity.details}
                     </p>
-                    <p className={styles.localNote}>
-                        This demo saves your plan on this device. It does not
-                        send your details to the organization.
+                    <p className={styles.localNote} id="signup-storage-note">
+                        This demo stores your details in this browser only. It
+                        does not send them to the organization or reserve a
+                        place.
                     </p>
                 </div>
 

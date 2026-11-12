@@ -132,7 +132,7 @@ const MyShifts = ({ signups, onCancelSignup }) => {
                                             setCancelingSignup(signup)
                                         }
                                     >
-                                        Cancel sign-up
+                                        Remove from plan
                                     </button>
                                 </div>
                             </article>

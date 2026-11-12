@@ -13,8 +13,10 @@ const dateOptions = [
 const isWithinThisWeek = (dateString) => {
     const today = new Date();
     today.setHours(0, 0, 0, 0);
-    const nextWeek = new Date(today);
-    nextWeek.setDate(today.getDate() + 7);
+    const weekStart = new Date(today);
+    weekStart.setDate(today.getDate() - ((today.getDay() + 6) % 7));
+    const nextWeek = new Date(weekStart);
+    nextWeek.setDate(weekStart.getDate() + 7);
     const date = new Date(`${dateString}T12:00:00`);
 
     return date >= today && date < nextWeek;

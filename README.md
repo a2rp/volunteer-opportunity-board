@@ -2,7 +2,7 @@
 
 # Goodturn - Volunteer Opportunities
 
-Goodturn is a responsive volunteer opportunity board for finding nearby community shifts and keeping a personal plan. Browse local listings, filter by cause or date, save shifts to revisit, and add sign-ups to **My shifts**.
+Goodturn is a responsive demo volunteer board with sample community shifts and a personal plan saved in the browser. Browse listings, filter by cause or date, save opportunities, and add local sign-ups to **My shifts**.
 
 **Live site:** [https://a2rp.github.io/volunteer-opportunity-board/](https://a2rp.github.io/volunteer-opportunity-board/)
 
@@ -26,9 +26,9 @@ Goodturn is a responsive volunteer opportunity board for finding nearby communit
 
 The opportunity list is sample data in `src/data/volunteerOpportunities.js`. Dates are calculated from the current day when the app loads. Search and filters only change which cards are shown; clearing them returns all sample opportunities.
 
-Saved opportunity IDs are stored in the browser's `localStorage` under `goodturn-saved-shifts`. Sign-up details are stored under `goodturn-signups`. The app reads these values when it opens, updates them when a shift is saved, added, or removed, and handles missing or invalid saved data by starting with an empty list.
+Saved opportunity IDs are stored in the browser's `localStorage` under `goodturn-saved-shifts`. Sign-up details are stored under `goodturn-signups`. The app reads these values when it opens, updates them when a shift is saved, added, or removed, and ignores malformed entries or sign-ups that no longer match a listed opportunity.
 
-This is a front-end demonstration. Saved shifts and sign-ups stay in the current browser on the current device. Adding a sign-up does not contact the listed organization, reserve a real place, or send the entered email. Clearing the browser's site data removes the saved plan. Use sample details if you are exploring the interface.
+This is a front-end demonstration. Saved shifts and sign-ups stay in the current browser on the current device. Adding or canceling a sign-up does not contact the listed organization or reserve or release a real place. If browser storage is unavailable, the app warns that changes may be lost on reload. Clearing the browser's site data removes the saved plan. Use sample details if you are exploring the interface.
 
 ## Run locally
 
